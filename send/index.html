@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <div
+      class="min-h-screen bg-gray-100 text-gray-800 antialiased px-4 py-6 flex flex-col justify-center sm:py-12"
+    >
+      <div class="relative py-3 sm:max-w-xl mx-auto text-center">
+        <span class="text-2xl font-semibold text-left">Ferreteria</span>
+        <div
+          class="relative mt-4 bg-gray-200 shadow-md sm:rounded-lg text-left"
+        >
+          <div class="h-2 bg-gray-600 rounded-t-md"></div>
+          <form id="form">
+            <div class="py-6 px-8">
+              <label class="block font-semibold">Nombre</label>
+              <input
+                name="input"
+                type="text"
+                placeholder="Nombre"
+                class="border w-full h-5 px-3 py-5 mb-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                required
+                maxlength="50"
+              />
+              <label class="block font-semibold">Telefono</label>
+              <input
+                name="input"
+                type="tel"
+                placeholder="Telefono (Solo numeros)"
+                class="border w-full h-5 px-3 py-5 mb-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                required
+                minlength="10"
+                maxlength="10"
+                pattern="[0-9]+"
+              />
+              <label class="block font-semibold">Email</label>
+              <input
+                name="input"
+                type="email"
+                placeholder="Email"
+                class="border w-full h-5 px-3 py-5 mb-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                required
+                maxlength="50"
+              />
+              <label class="block font-semibold">Direccion</label>
+              <input
+                name="input"
+                type="text"
+                placeholder="Direccion"
+                class="border w-full h-5 px-3 py-5 mb-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+                required
+              />
+              <label class="block font-semibold">Objeto</label>
+              <div id="objetos" class="grid grid-cols-1"></div>
+              <div class="grid grid-cols-4 gap-1">
+                <div class="col-span-3">
+                  <label class="block font-semibold">Añadir</label>
+                  <button
+                    type="button"
+                    onclick="add()"
+                    class="bg-gray-500 text-white py-0 px-6 w-full rounded-lg hover:bg-gray-600 transition-colors text-3xl font-semibold"
+                  >
+                    +
+                  </button>
+                </div>
+                <div class="col-span-1">
+                  <label class="block font-semibold">Eliminar</label>
+                  <button
+                    type="button"
+                    onclick="rem()"
+                    class="bg-red-600 text-white py-0 px-6 w-full rounded-lg hover:bg-red-700 transition-colors text-3xl font-semibold"
+                  >
+                    -
+                  </button>
+                </div>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <button
+                  class="mt-4 bg-gray-500 text-white py-2 px-6 rounded-lg hover:bg-gray-600 transition-colors"
+                  type="submit"
+                  onclick="validar()"
+                >
+                  Calcular
+                </button>
+                <div>
+                  <input type="checkbox" id="js" class="" />
+                  <label for="js">Utilizar JS?</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
